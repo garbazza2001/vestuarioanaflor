@@ -13,15 +13,15 @@
         </div>
         <nav class="cabecalho">
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="index.html" class="delay">Home</a></li>
                 <li><a href="#new-arrivals">Novidades</a></li>
                 <li><a href="#best-sellers">Mais Vendidos</a></li>
                 <li class="dropdown">
                     <a href="#collections" class="dropbtn">Coleções</a>
                     <div class="dropdown-content">
-                        <a href="vestidos.html">Vestidos</a>
-                        <a href="blusas.html">Blusas</a>
-                        <a href="calcas.html">Calças</a>
+                        <a href="vestidos.html" class="delay">Vestidos</a>
+                        <a href="blusas.html" class="delay">Blusas</a>
+                        <a href="calcas.html" class="delay">Calças</a>
                     </div>
                 </li>
                 <li><a href="#contact">Contato</a></li>
@@ -104,5 +104,15 @@
     <footer>
         <p>&copy; 2024 Ana Flor. Todos os direitos reservados.</p>
     </footer>
+    <script>document.querySelectorAll('.delay').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const href = this.href;
+            setTimeout(() => {
+                window.location.href = href;
+            },300);
+        });
+    });
+    </script>
 </body>
 </html>
