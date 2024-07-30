@@ -1,5 +1,11 @@
+@font-face {
+    font-family: 'FonteLUCAS';
+    src: url('/fonts/tickbite-type-colin-extralight.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'FonteLucas';
     margin: 0;
     padding: 0;
     background-color: #f8f0f5;
@@ -148,6 +154,7 @@ header {
 }
 .banner-section{
     padding: 0px;
+    margin-bottom: -5px;
 }
 .banner img{
     width: 100%;
@@ -225,7 +232,12 @@ section h2 {
     font-size: 2em;
     margin-bottom: 20px;
 }
-
+.best-sellers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 .product-grid {
     display: flex;
     flex-wrap: wrap;
@@ -240,11 +252,35 @@ section h2 {
     padding: 20px;
     text-align: center;
     width: 200px;
+    transition: ease .3s;
+}
+
+.product:hover {
+    color: #e91e63;
+}
+
+.buy-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #e91e63;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #c2185b;
+}
+
+#best-sellers-section{
+    background-color: #f8f0f5;
 }
 
 .product img {
     width: 100%;
-    height: auto;
+    height: 427px;
     border-radius: 5px;
 }
 
@@ -257,4 +293,74 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+#about-us {
+    padding: 60px 20px;
+    background-color: #f8f0f5;
+    color: #333;
+    text-align: center;
+}
+
+#about-us .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#about-us h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#about-us p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+#about-us{
+    border-top: solid 10px black;
+    border-bottom: solid 10px black;
+}
+
+.qualidades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 190px;
+    background-color: #e91e63;
+    width: 100%;
+    height: 140px;
+    color: #fff;
+    align-items: center; 
+}
+
+#qualidades-section {
+    padding: 0;
+}
+
+.x {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+}
+
+.q2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+
+.q2 p {
+    margin: 0;
+    padding-left: 10px; 
+}
+
+.x h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 15px;
+    font-size: 1.7rem;
 }
