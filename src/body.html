@@ -10,6 +10,7 @@
 <body>
     <header>
         <div class="top-bar">
+            <span class="menu-icon" onclick="openNav()">&#9776;</span>
             <div class="logo">
                 <a href="index.html">
                     <img src="/assets/logo.jpg" alt="Ana Flor Logo">
@@ -79,7 +80,20 @@
             </div>
         </div>
     </header>
-
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">HOME</a>
+        <a href="#best-sellers-section">MAIS ACESSADOS</a>
+        <a href="#new-arrivals">NOVIDADES</a>
+        <a href="#contact-section">COMPRE</a>
+        <a href="#categorias">CATEGORIAS</a>
+        <a href="vestidos.html">VESTIDOS</a>
+        <a href="t_shirts.html">T-SHIRTS</a>
+        <a href="body.html">BODY</a>
+        <a href="croped.html">CROPED</a>
+        <a href="manga_longa.html">MANGA-LONGA</a>
+        <a href="shorts.html">SHORTS</a>
+    </div>
     <section id="product-category">
         <h2>Body</h2>
         <div class="product-grid">
@@ -136,6 +150,23 @@
                 alert('Nenhum resultado encontrado. Tente novamente.');
             }
         }
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+        }
+
+        document.querySelectorAll('.delay').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const href = this.href;
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 300);
+            });
+        });
     </script>
 
     <footer>
