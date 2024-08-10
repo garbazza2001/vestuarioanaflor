@@ -498,4 +498,11 @@ footer p {
         top: 22px;
     }
 
+    #trocar h3{
+        display: none;
+    }
+
+    #trocar img{
+        display: none;
+    }
 }
